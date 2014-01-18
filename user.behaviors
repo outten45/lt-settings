@@ -16,10 +16,18 @@
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
-              (:lt.objs.style/set-theme "ibdknox")]
+              (:lt.objs.style/set-theme "ambiance")
+              (:lt.objs.editor/tab-settings false 2 2)
+              (:lt.objs.style/font-settings nil 11 1)]
 
      ;; Here we can add behaviors to just clojure editors
-     :editor.clojure [(:lt.objs.langs.clj/print-length 1000)]}
+     :editor.clojure [(:lt.objs.langs.clj/print-length 1000)]
+     :editor.javascript [(:lt.objs.style/font-settings nil 9 1)]
+     :files [(:lt.objs.files/file-types [{:exts [:jsx],
+                                          :mime "text/javascript",
+                                          :name "Jsx",
+                                          :tags [:editor.javascript]}])]
+     }
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff

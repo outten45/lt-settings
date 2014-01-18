@@ -13,6 +13,7 @@
 {:+ {:app {"ctrl-alt-t" [:workspace.show]
            "ctrl-alt-c" [:toggle-console]
            "cmd-r" [:navigate-workspace]
+           "alt-r" [:navigate-workspace]
            "f2" [:save-all]
            "shift-right" [:tabset.next]
            "shift-left" [:tabset.prev]}
